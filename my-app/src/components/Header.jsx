@@ -35,8 +35,15 @@ const Header = () => {
       <header className="flex flex-wrap items-center justify-between px-5 py-3 shadow-sm bg-white">
         {/* Logo */}
         <div className="py-3 px-6 border-r border-gray-200">
-          <Image src={Logo} alt="Blinkit Logo" className="w-28" />
-        </div>
+  <Image
+    src="/assets/logo/logo (2).png"  // no /public here
+    alt="Blinkit Logo"
+    width={112}                      // add width
+    height={40}                      // add height
+    className="w-28 h-auto"          // optional Tailwind classes
+  />
+</div>
+
 
         {/* Address selection */}
         <div className="px-6 py-3">
