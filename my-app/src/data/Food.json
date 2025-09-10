@@ -1,0 +1,143 @@
+[
+    {
+    "id": 1,
+    "name": "Aavin Premium Cow Milk",
+    "price": 22,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/d530857b-40c0-4b59-9edf-c9ff49a7e597.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 2,
+    "name": "Modern 100% Whole Wheat Bread (Zero Maida)",
+    "price": 55,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/34ed29b4-1211-4677-a025-e52d5f0d144c.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 3,
+    "name": "Chiko White Eggs",
+    "price": 70,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/081af576-d7e2-44ec-b220-13d88b4a63b2.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 25,
+    "qty":"50 ml"
+    
+},{
+    "id": 4,
+    "name": "Aavin Premium Cow Milk",
+    "price": 22,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/d530857b-40c0-4b59-9edf-c9ff49a7e597.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 5,
+    "name": "Modern 100% Whole Wheat Bread (Zero Maida)",
+    "price": 55,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/34ed29b4-1211-4677-a025-e52d5f0d144c.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 6,
+    "name": "Chiko White Eggs",
+    "price": 70,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/081af576-d7e2-44ec-b220-13d88b4a63b2.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 25,
+    "qty":"50 ml"
+    
+},{
+    "id": 7,
+    "name": "Aavin Premium Cow Milk",
+    "price": 22,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/d530857b-40c0-4b59-9edf-c9ff49a7e597.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 8,
+    "name": "Modern 100% Whole Wheat Bread (Zero Maida)",
+    "price": 55,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/34ed29b4-1211-4677-a025-e52d5f0d144c.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 9,
+    "name": "Chiko White Eggs",
+    "price": 70,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/081af576-d7e2-44ec-b220-13d88b4a63b2.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 25,
+    "qty":"50 ml"
+    
+},{
+    "id": 10,
+    "name": "Aavin Premium Cow Milk",
+    "price": 22,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/d530857b-40c0-4b59-9edf-c9ff49a7e597.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 11,
+    "name": "Modern 100% Whole Wheat Bread (Zero Maida)",
+    "price": 55,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/34ed29b4-1211-4677-a025-e52d5f0d144c.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 0,
+    "qty":"50 ml"
+    
+},
+    {
+    "id": 12,
+    "name": "Chiko White Eggs",
+    "price": 70,
+    "category": "food",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/081af576-d7e2-44ec-b220-13d88b4a63b2.png",
+    "timin": "22 min",
+    "rating":5,
+    "offer": 25,
+    "qty":"50 ml"
+    
+}
+]

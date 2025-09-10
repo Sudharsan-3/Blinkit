@@ -1,0 +1,134 @@
+[
+    {
+    "id": 1,
+    "name": "Happydent Wave Sugarfree Mint Chewing Gum 18 Pcs",
+    "price": 48,
+    "category": "Candies",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/4f10d180-8987-4870-9c5a-04635e58005b.png",
+    "timin": "21 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"44 g"
+    
+},
+    {
+    "id": 2,
+    "name": "Chupa Chups Sour Belt Mixed Fruit Candy - Pack of 3",
+    "price": 83,
+    "category": "Candies",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/79b3c582-d683-43a3-90e3-a862b84669d1.png",
+    "timin": "22 min",
+    "rating":4.5,
+    "offer": 0,
+    "qty":"44 g"
+    
+},
+    {
+    "id": 3,
+    "name": "Orbit Mixed Fruit Flavour Chewing Gum (Sugar Free)",
+    "price": 50,
+    "category": "Candies",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/06c51cd5-e8b4-43df-afa4-e5709bb5edbb.png",
+    "timin": "21 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"44 g"
+    
+},
+{
+"id": 4,
+"name": "Chupa Chups Sour Belt Mixed Fruit Candy - Pack of 3",
+"price": 83,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/79b3c582-d683-43a3-90e3-a862b84669d1.png",
+"timin": "22 min",
+"rating":4.5,
+"offer": 0,
+"qty":"44 g"
+
+},
+{
+"id": 5,
+"name": "Orbit Mixed Fruit Flavour Chewing Gum (Sugar Free)",
+"price": 50,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/06c51cd5-e8b4-43df-afa4-e5709bb5edbb.png",
+"timin": "21 min",
+"rating":3.9,
+"offer": 0,
+"qty":"44 g"
+
+},
+{
+"id": 6,
+"name": "Chupa Chups Sour Belt Mixed Fruit Candy - Pack of 3",
+"price": 83,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/79b3c582-d683-43a3-90e3-a862b84669d1.png",
+"timin": "22 min",
+"rating":4.5,
+"offer": 0,
+"qty":"44 g"
+
+},
+{
+"id": 7,
+"name": "Orbit Mixed Fruit Flavour Chewing Gum (Sugar Free)",
+"price": 50,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/06c51cd5-e8b4-43df-afa4-e5709bb5edbb.png",
+"timin": "21 min",
+"rating":3.9,
+"offer": 0,
+"qty":"44 g"
+
+},
+{
+"id": 8,
+"name": "Chupa Chups Sour Belt Mixed Fruit Candy - Pack of 3",
+"price": 83,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/79b3c582-d683-43a3-90e3-a862b84669d1.png",
+"timin": "22 min",
+"rating":4.5,
+"offer": 0,
+"qty":"44 g"
+
+},
+{
+"id": 9,
+"name": "Orbit Mixed Fruit Flavour Chewing Gum (Sugar Free)",
+"price": 50,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/06c51cd5-e8b4-43df-afa4-e5709bb5edbb.png",
+"timin": "21 min",
+"rating":3.9,
+"offer": 0,
+"qty":"44 g"
+
+},
+{
+"id": 10,
+"name": "Chupa Chups Sour Belt Mixed Fruit Candy - Pack of 3",
+"price": 83,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/79b3c582-d683-43a3-90e3-a862b84669d1.png",
+"timin": "22 min",
+"rating":4.5,
+"offer": 0,
+"qty":"44 g"
+
+},
+{
+"id": 11,
+"name": "Orbit Mixed Fruit Flavour Chewing Gum (Sugar Free)",
+"price": 50,
+"category": "Candies",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/06c51cd5-e8b4-43df-afa4-e5709bb5edbb.png",
+"timin": "21 min",
+"rating":3.9,
+"offer": 0,
+"qty":"44 g"
+
+}
+]

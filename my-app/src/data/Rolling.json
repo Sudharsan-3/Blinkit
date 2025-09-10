@@ -1,0 +1,110 @@
+[
+    {
+    "id": 1,
+    "name": "Brown Ripper Rolling Paper 32 Leaves + 32 Roaches Stash Pro",
+    "price": 122,
+    "category": "rolling",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/500d636d-e59e-4835-a0e5-3d8e7ad26d3b.png",
+    "timin": "22 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"1 pack"
+    
+},
+    {
+    "id": 2,
+    "name": "Perfect Rolled Cones (Natural) - Bongchie",
+    "price": 45,
+    "category": "rolling",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/71ddb6c0-c8d8-47fb-80d6-e89bce9fd498.png",
+    "timin": "22 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"1 pack"
+    
+},
+    {
+    "id": 3,
+    "name": "Brown Ripper Rolling Paper 32 Leaves + 32 Roaches Stash Pro",
+    "price": 80,
+    "category": "rolling",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a6eb6af-8143-4195-a788-c350255a8e1e.png",
+    "timin": "22 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"1 pack"
+    
+},
+{
+"id": 4,
+"name": "Perfect Rolled Cones (Natural) - Bongchie",
+"price": 45,
+"category": "rolling",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/71ddb6c0-c8d8-47fb-80d6-e89bce9fd498.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 0,
+"qty":"1 pack"
+
+},
+{
+"id": 5,
+"name": "Brown Ripper Rolling Paper 32 Leaves + 32 Roaches Stash Pro",
+"price": 80,
+"category": "rolling",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a6eb6af-8143-4195-a788-c350255a8e1e.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 0,
+"qty":"1 pack"
+
+},
+{
+"id": 6,
+"name": "Perfect Rolled Cones (Natural) - Bongchie",
+"price": 45,
+"category": "rolling",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/71ddb6c0-c8d8-47fb-80d6-e89bce9fd498.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 0,
+"qty":"1 pack"
+
+},
+{
+"id": 7,
+"name": "Brown Ripper Rolling Paper 32 Leaves + 32 Roaches Stash Pro",
+"price": 80,
+"category": "rolling",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a6eb6af-8143-4195-a788-c350255a8e1e.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 0,
+"qty":"1 pack"
+
+},
+{
+"id": 8,
+"name": "Perfect Rolled Cones (Natural) - Bongchie",
+"price": 45,
+"category": "rolling",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/71ddb6c0-c8d8-47fb-80d6-e89bce9fd498.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 0,
+"qty":"1 pack"
+
+},
+{
+"id": 9,
+"name": "Brown Ripper Rolling Paper 32 Leaves + 32 Roaches Stash Pro",
+"price": 80,
+"category": "rolling",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a6eb6af-8143-4195-a788-c350255a8e1e.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 0,
+"qty":"1 pack"
+
+}
+]

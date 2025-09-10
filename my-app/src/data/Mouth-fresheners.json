@@ -1,0 +1,110 @@
+[
+    {
+    "id": 1,
+    "name": "Rajnigandha Silver Pearl Silver Coated Elaichi Mouth Freshener",
+    "price": 60,
+    "category": "Mouth-fresheners",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e6b15663-dac4-47cf-9157-5b9b413c5fbb.png",
+    "timin": "21 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"15 g"
+    
+},
+    {
+    "id": 2,
+    "name": "Impact Sugar Free Mint Candy (Fresh Mints)",
+    "price": 150,
+    "category": "Mouth-fresheners",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/04badfcb-45d1-492b-a9d5-24389c6087f1.png",
+    "timin": "22 min",
+    "rating":4.5,
+    "offer": 8,
+    "qty":"15 g"
+    
+},
+    {
+    "id": 3,
+    "name": "Impact Sugar Free Mint Candy (Ice Mints)",
+    "price": 150,
+    "category": "Mouth-fresheners",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/b7159ab5-6b7c-4cf6-ad64-806789006144.png",
+    "timin": "21 min",
+    "rating":4,
+    "offer": 0,
+    "qty":"15 g"
+    
+},
+{
+"id": 4,
+"name": "Impact Sugar Free Mint Candy (Fresh Mints)",
+"price": 150,
+"category": "Mouth-fresheners",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/04badfcb-45d1-492b-a9d5-24389c6087f1.png",
+"timin": "22 min",
+"rating":4.5,
+"offer": 8,
+"qty":"15 g"
+
+},
+{
+"id": 5,
+"name": "Impact Sugar Free Mint Candy (Ice Mints)",
+"price": 150,
+"category": "Mouth-fresheners",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/b7159ab5-6b7c-4cf6-ad64-806789006144.png",
+"timin": "21 min",
+"rating":4,
+"offer": 0,
+"qty":"15 g"
+
+},
+{
+"id": 6,
+"name": "Impact Sugar Free Mint Candy (Fresh Mints)",
+"price": 150,
+"category": "Mouth-fresheners",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/04badfcb-45d1-492b-a9d5-24389c6087f1.png",
+"timin": "22 min",
+"rating":4.5,
+"offer": 8,
+"qty":"15 g"
+
+},
+{
+"id": 7,
+"name": "Impact Sugar Free Mint Candy (Ice Mints)",
+"price": 150,
+"category": "Mouth-fresheners",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/b7159ab5-6b7c-4cf6-ad64-806789006144.png",
+"timin": "21 min",
+"rating":4,
+"offer": 0,
+"qty":"15 g"
+
+},
+{
+"id": 8,
+"name": "Impact Sugar Free Mint Candy (Fresh Mints)",
+"price": 150,
+"category": "Mouth-fresheners",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/04badfcb-45d1-492b-a9d5-24389c6087f1.png",
+"timin": "22 min",
+"rating":4.5,
+"offer": 8,
+"qty":"15 g"
+
+},
+{
+"id": 9,
+"name": "Impact Sugar Free Mint Candy (Ice Mints)",
+"price": 150,
+"category": "Mouth-fresheners",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/b7159ab5-6b7c-4cf6-ad64-806789006144.png",
+"timin": "21 min",
+"rating":4,
+"offer": 0,
+"qty":"15 g"
+
+}
+]

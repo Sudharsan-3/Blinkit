@@ -1,0 +1,110 @@
+[
+    {
+    "id": 1,
+    "name": "Kab's Jackpot Cheese Balls",
+    "price": 65,
+    "category": "Snacks",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/fe70ea27-8ead-446d-be12-f8f8d45c4d0e.png",
+    "timin": "21 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"60 g"
+    
+},
+    {
+    "id": 2,
+    "name": "Moi Soi White Rice Paper",
+    "price": 175,
+    "category": "Snacks",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e6154435-bbb6-45bb-963d-728dbef78b74.png",
+    "timin": "22 min",
+    "rating":3.9,
+    "offer": 8,
+    "qty":"60 g"
+    
+},
+    {
+    "id": 3,
+    "name": "Kab's Jackpot Fiery and Crunchy Crisps",
+    "price": 65,
+    "category": "Snacks",
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/52164aee-c1db-48b7-8b76-2acfbaeaf4c2.png",
+    "timin": "21 min",
+    "rating":3.9,
+    "offer": 0,
+    "qty":"60 g"
+    
+},
+{
+"id": 4,
+"name": "Moi Soi White Rice Paper",
+"price": 175,
+"category": "Snacks",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e6154435-bbb6-45bb-963d-728dbef78b74.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 8,
+"qty":"60 g"
+
+},
+{
+"id": 5,
+"name": "Kab's Jackpot Fiery and Crunchy Crisps",
+"price": 65,
+"category": "Snacks",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/52164aee-c1db-48b7-8b76-2acfbaeaf4c2.png",
+"timin": "21 min",
+"rating":3.9,
+"offer": 0,
+"qty":"60 g"
+
+},
+{
+"id": 6,
+"name": "Moi Soi White Rice Paper",
+"price": 175,
+"category": "Snacks",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e6154435-bbb6-45bb-963d-728dbef78b74.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 8,
+"qty":"60 g"
+
+},
+{
+"id": 7,
+"name": "Kab's Jackpot Fiery and Crunchy Crisps",
+"price": 65,
+"category": "Snacks",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/52164aee-c1db-48b7-8b76-2acfbaeaf4c2.png",
+"timin": "21 min",
+"rating":3.9,
+"offer": 0,
+"qty":"60 g"
+
+},
+{
+"id": 8,
+"name": "Moi Soi White Rice Paper",
+"price": 175,
+"category": "Snacks",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e6154435-bbb6-45bb-963d-728dbef78b74.png",
+"timin": "22 min",
+"rating":3.9,
+"offer": 8,
+"qty":"60 g"
+
+},
+{
+"id": 9,
+"name": "Kab's Jackpot Fiery and Crunchy Crisps",
+"price": 65,
+"category": "Snacks",
+"image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/52164aee-c1db-48b7-8b76-2acfbaeaf4c2.png",
+"timin": "21 min",
+"rating":3.9,
+"offer": 0,
+"qty":"60 g"
+
+}
+]
