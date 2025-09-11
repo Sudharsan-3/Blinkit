@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,meta%E2%80%A6one,w=360/app/images/category/cms_images/icon/1487_1679466558536.png",
+        "type":"two",
+        "name":"Vegetables & Fruits"
+    },
+    {
+        "id":2,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/images/category/cms_images/icon/14_1678949253289.png",
+        "type":"two",
+        "name":"Dairy & Breakfast"
+    },
+    
+    {
+        "id":3,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,meta%E2%80%A6one,w=360/app/images/category/cms_images/icon/1237_1670927167688.png",
+        "type":"three",
+        "name":"Munchies"
+    },{
+        "id":4,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,meta%E2%80%A6none,w=360/app/images/category/cms_images/icon/332_1680269009421.png",
+        "type":"three",
+        "name":"Cold Drinks & Juices"
+    },{
+        "id":5,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/app/images/category/cms_images/icon/15_1676610279582.png",
+        "type":"three",
+        "name":"Instant&Frozen"
+    }
+    
+    ]

@@ -30,7 +30,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white shadow-sm">
+    <div className="sticky top-0 z-50 w-full bg-white ">
       <header className="w-full  mx-auto ">
         {/* === Desktop / large === */}
         <div className="hidden lg:flex items-center  gap-4">
@@ -92,7 +92,7 @@ const Header = () => {
         </div>
 
         {/* === Mobile / tablet === */}
-        <div className="flex w-full justify-between lg:hidden">
+        <div className="flex  w-full justify-between lg:hidden p-4">
           {/* Address */}
           <div>
             <h1 className="font-extrabold text-sm sm:text-base">
@@ -110,7 +110,8 @@ const Header = () => {
         </div>
 
         {/* Search below icons */}
-        <div className="mt-3 flex lg:hidden items-center w-full h-12 rounded-2xl border border-gray-200 px-4">
+        <div className="px-4  lg:px-0">
+          <div className="   flex lg:hidden items-center w-full h-12 rounded-2xl border border-gray-200 px-4">
           <CiSearch size={22} className="text-gray-500" />
           <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
             <input
@@ -125,6 +126,8 @@ const Header = () => {
             />
           </div>
         </div>
+        </div>
+        
       </header>
 
       <style jsx>{`

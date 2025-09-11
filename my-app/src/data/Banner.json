@@ -1,0 +1,27 @@
+[
+{
+    "id":1,
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg",
+    "type":"banner-distop"
+},
+{
+    "id":2,
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1440/layout-engine/2024-02/android_feed_mweb-1.png",
+    "type":"banner-mobile"
+},
+
+{
+    "id":3,
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg",
+    "type":"card"
+},{
+    "id":4,
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg",
+    "type":"card"
+},{
+    "id":5,
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg",
+    "type":"card"
+}
+
+]
