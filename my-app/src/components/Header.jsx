@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Logo from "../../public/assets/logo/logo (2).png";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
+import { FaRegCircleUser } from "react-icons/fa6";
 
 const Header = () => {
   const placeholders = [
@@ -14,7 +14,6 @@ const Header = () => {
     "Search 'fruits'",
     "Search 'vegetables'",
   ];
-
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [cartItems] = useState(0);
@@ -31,31 +30,87 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 w-full">
-      <header className="flex flex-wrap items-center justify-between px-5 py-3 shadow-sm bg-white">
-        {/* Logo */}
-        <div className="py-3 px-6 border-r border-gray-200">
-  <Image
-    src="/assets/logo/logo (2).png"  // no /public here
-    alt="Blinkit Logo"
-    width={112}                      // add width
-    height={40}                      // add height
-    className="w-28 h-auto"          // optional Tailwind classes
-  />
-</div>
+    <div className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      <header className="w-full  mx-auto ">
+        {/* === Desktop / large === */}
+        <div className="hidden lg:flex items-center  gap-4">
+          {/* Logo + address */}
+          <div className="flex items-center ">
+            <div className="p-7 border border-transparent border-r-gray-100">
+              <Image
+              src="/assets/logo/logo (2).png"
+              alt="Blinkit Logo"
+              width={112}
+              height={40}
+              className="w-28 h-auto"
+            />
+            </div>
+            
+            <div className="p-5">
+              <h1 className="font-extrabold text-base">Delivery in 21 minutes</h1>
+              <div className="flex items-center gap-1 text-sm text-gray-600">
+                <p>XXW8+RPF, Gopalapuram, Coim...</p>
+                <TiArrowSortedDown size={18} />
+              </div>
+            </div>
+          </div>
 
+          {/* Search bar */}
+          <div className="flex items-center w-[50%] h-12 rounded-2xl border border-gray-200 px-4">
+            <CiSearch size={22} className="text-gray-500" />
+            <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
+              <input
+                type="text"
+                className="absolute w-full outline-none text-sm bg-transparent"
+                style={{
+                  transform: fade ? "translateY(0%)" : "translateY(-100%)",
+                  opacity: fade ? 1 : 0,
+                  transition: "transform 0.3s ease, opacity 0.3s ease",
+                }}
+                placeholder={placeholders[placeholderIndex]}
+              />
+            </div>
+          </div>
 
-        {/* Address selection */}
-        <div className="px-6 py-3">
-          <h1 className="font-extrabold text-base">Delivery in 21 minutes</h1>
-          <div className="flex items-center gap-1 text-sm text-gray-600">
-            <p>XXW8+RPF, Gopalapuram, Coim...</p>
-            <TiArrowSortedDown />
+          {/* Login + cart */}
+          <div className="flex items-center gap-6">
+            <div className="cursor-pointer p-7">
+              <p className="text-lg font-medium">Login</p>
+            </div>
+            <button
+              disabled={cartItems === 0}
+              className={`flex items-center gap-2 px-4 py-3 rounded-lg transition text-white ${
+                cartItems === 0
+                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                  : "bg-green-500 text-white hover:animate-wiggle"
+              }`}
+            >
+              <HiOutlineShoppingCart size={22} />
+              My Cart
+            </button>
           </div>
         </div>
 
-        {/* Search bar */}
-        <div className="flex items-center w-full sm:w-[48%] h-12 rounded-2xl border border-gray-200 px-4 mt-3 sm:mt-0">
+        {/* === Mobile / tablet === */}
+        <div className="flex w-full justify-between lg:hidden">
+          {/* Address */}
+          <div>
+            <h1 className="font-extrabold text-sm sm:text-base">
+              Delivery in 21 minutes
+            </h1>
+            <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-600">
+              <p>XXW8+RPF, Gopalapuram...</p>
+              <TiArrowSortedDown size={14} />
+            </div>
+          </div>
+          {/* Only user icon */}
+          <div className="flex items-center">
+            <FaRegCircleUser size={22} />
+          </div>
+        </div>
+
+        {/* Search below icons */}
+        <div className="mt-3 flex lg:hidden items-center w-full h-12 rounded-2xl border border-gray-200 px-4">
           <CiSearch size={22} className="text-gray-500" />
           <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
             <input
@@ -70,30 +125,8 @@ const Header = () => {
             />
           </div>
         </div>
-
-        {/* Login & Cart */}
-        <div className="flex items-center gap-6 mt-3 sm:mt-0">
-          {/* Login */}
-          <div className="py-3 h-full cursor-pointer">
-            <p className="text-lg font-medium">Login</p>
-          </div>
-
-          {/* Cart */}
-          <button
-            disabled={cartItems === 0}
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg transition ${
-              cartItems === 0
-                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-green-500 text-white hover:animate-wiggle"
-            }`}
-          >
-            <HiOutlineShoppingCart size={22} />
-            My Cart
-          </button>
-        </div>
       </header>
 
-      {/* Cart wiggle animation */}
       <style jsx>{`
         @keyframes wiggle {
           0%,
