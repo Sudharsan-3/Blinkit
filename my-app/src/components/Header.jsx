@@ -6,7 +6,10 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
 import { FaRegCircleUser } from "react-icons/fa6";
 
+import { useRouter } from 'next/navigation';
+
 const Header = () => {
+  const router = useRouter()
   const placeholders = [
     "Search 'sugar'",
     "Search 'snacks'",
@@ -59,7 +62,9 @@ const Header = () => {
           <div className="flex items-center w-[50%] h-12 rounded-2xl border border-gray-200 px-4">
             <CiSearch size={22} className="text-gray-500" />
             <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
+              
               <input
+                onClick={()=>router.push('/s')} 
                 type="text"
                 className="absolute w-full outline-none text-sm bg-transparent"
                 style={{
@@ -115,6 +120,7 @@ const Header = () => {
           <CiSearch size={22} className="text-gray-500" />
           <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
             <input
+             onClick={()=>router.push('/s')} 
               type="text"
               className="absolute w-full outline-none text-sm bg-transparent"
               style={{
