@@ -1,3 +1,4 @@
+'use client'
 import ProductsFiltered from '@/components/category/ProductsFiltered'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
