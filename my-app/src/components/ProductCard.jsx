@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import data from "../data/Products.json";
+import Link from "next/link";
 
 const ProductCard = () => {
   return (
@@ -13,13 +14,21 @@ const ProductCard = () => {
               key={id}
               className="hover:cursor-pointer flex flex-col items-center"
             >
-              <Image
-                src={item.image}
-                alt={item.name || "Product"}
-                width={160}
-                height={160}
-                className="rounded-md object-contain w-full h-auto"
-              />
+              <Link
+                href={{
+                  pathname: "/filter",
+                  query: { category: item.category.toLowerCase() } // or whatever property you want
+                }}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.name || "Product"}
+                  width={160}
+                  height={160}
+                  className="rounded-md object-contain w-full h-auto"
+                />
+              </Link>
+
             </div>
           ))}
         </div>

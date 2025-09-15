@@ -1,0 +1,296 @@
+[
+    {
+    "id":1,
+    "category":"drinks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1323_1692947258191.png",
+    "name":"Beverages Gift Packs",
+    "type":1
+},
+{
+    "id":2,
+    "category":"drinks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1102_1649432926740.png",
+    "name":"Soft Drinks",
+    "type":2
+},
+{
+    "id":3,
+    "category":"drinks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/955_1643385414974.png",
+    "name":"Fruit Juice",
+    "type":3
+} ,{
+    "id":4,
+    "category":"drinks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1108_1684311412858.png",
+    "name":"Mango Drinks",
+    "type":4
+}
+, {
+    "id":5,
+    "category":"drinks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1323_1692947258191.png",
+    "name":"Pure Juices",
+    "type":5
+}
+, {
+    "id":6,
+    "category":"Rolling-Paper",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1948_1660715272304.png",
+    "name":"Cigarettes",
+    "type":1
+}
+, {
+    "id":7,
+    "category":"Rolling-Paper",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1715069589495-3",
+    "name":"Cigar",
+    "type":2
+}
+, {
+    "id":8,
+    "category":"Rolling-Paper",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1715069589495-3",
+    "name":"Cigar",
+    "type":3
+}
+, {
+    "id":9,
+    "category":"Rolling-Paper",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1715069589495-3",
+    "name":"Cigar",
+    "type":4
+}
+, {
+    "id":10,
+    "category":"Rolling-Paper",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1982_1649674540853.png",
+    "name":"Rolling Needs",
+    "type":5
+}
+, {
+    "id":11,
+    "category":"Rolling-Paper",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1982_1649674540853.png",
+    "name":"Rolling Needs",
+    "type":6
+}
+, {
+    "id":12,
+    "category":"Dairy",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/922_1643384380004.png",
+    "name":"Milk",
+    "type":1
+}
+, {
+    "id":13,
+    "category":"Dairy",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/953_1657599742631.png",
+    "name":"Bread & Pav",
+    "type":2
+}
+, {
+    "id":14,
+    "category":"Dairy",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1200_1657599895699.png",
+    "name":"Eggs",
+    "type":3
+}
+, {
+    "id":15,
+    "category":"Dairy",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/954_1680251634382.png",
+    "name":"Flakes & Kids Cereals",
+    "type":4
+}
+, {
+    "id":16,
+    "category":"Dairy",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/954_1680251634382.png",
+    "name":"Flakes & Kids Cereals",
+    "type":5
+}
+, {
+    "id":17,
+    "category":"Dairy",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/954_1680251634382.png",
+    "name":"Flakes & Kids Cereals",
+    "type":6
+}
+, {
+    "id":18,
+    "category":"Fruits",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1702463308432-3",
+    "name":"Fresh Vegetables",
+    "type":5
+}
+, {
+    "id":19,
+    "category":"Fruits",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1702734004998-8",
+    "name":"Fresh Fruits",
+    "type":5
+}
+, {
+    "id":20,
+    "category":"Fruits",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1712577388325-3",
+    "name":"Mangoes & Melons",
+    "type":5
+}
+, {
+    "id":21,
+    "category":"Fruits",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1702734004998-3",
+    "name":"Seasonal",
+    "type":5
+}
+, {
+    "id":22,
+    "category":"Fruits",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1702734004998-3",
+    "name":"Seasonal",
+    "type":5
+}
+, {
+    "id":23,
+    "category":"Snacks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/940_1643445382163.png",
+    "name":"Chips & Crisps",
+    "type":5
+}
+, {
+    "id":24,
+    "category":"Snacks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/107_1643445091063.png",
+    "name":"Rusks & Wafers",
+    "type":5
+}
+, {
+    "id":25,
+    "category":"Snacks",
+    "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1700735371138-2",
+    "name":"Energy Bars",
+    "type":5
+}
+, {
+    "id":26,
+    "category":"Snacks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/316_1643445356931.png",
+    "name":"Nachos",
+    "type":5
+}
+, {
+    "id":27,
+    "category":"Snacks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1178_1643445391732.png",
+    "name":"Bhujia & Mixtures",
+    "type":5
+}
+, {
+    "id":28,
+    "category":"Snacks",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/156_1643445347481.png",
+    "name":"Popcorn",
+    "type":5
+}
+, {
+    "id":29,
+    "category":"Flakes",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/962_1643384795557.png",
+    "name":"Noodles",
+    "type":5
+}
+, {
+    "id":30,
+    "category":"Flakes",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1413_1643385202902.png",
+    "name":"Frozen Veg Snacks",
+    "type":5
+}
+, {
+    "id":31,
+    "category":"Flakes",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1412_1643385216342.png",
+    "name":"Frozen Non-Veg Snacks",
+    "type":5
+}
+, {
+    "id":32,
+    "category":"Flakes",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1412_1643385216342.png",
+    "name":"Frozen Non-Veg Snacks",
+    "type":5
+}
+, {
+    "id":33,
+    "category":"Flakes",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/1412_1643385216342.png",
+    "name":"Frozen Non-Veg Snacks",
+    "type":5
+}
+, {
+    "id":34,
+    "category":"Sweet",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/943_1643444719353.png",
+    "name":"Indian Sweets",
+    "type":5
+}
+, {
+    "id":35,
+    "category":"Sweet",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/category/cms_images/icon/1930_1643444770081.png",
+    "name":"Indian Sweets",
+    "type":5
+}
+, {
+    "id":36,
+    "category":"Sweet",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/category/cms_images/icon/1289_1643444757757.png",
+    "name":"Indian Sweets",
+    "type":5
+}
+, {
+    "id":37,
+    "category":"Sweet",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=180/app/images/category/cms_images/icon/108_1669984636578.png",
+    "name":"Indian Sweets",
+    "type":5
+}
+, {
+    "id":38,
+    "category":"Sweet",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/943_1643444719353.png",
+    "name":"Indian Sweets",
+    "type":5
+}
+, {
+    "id":39,
+    "category":"Bakery",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/2380_1696572534396.png",
+    "name":"Biscuit Gift Pack",
+    "type":5
+}
+, {
+    "id":40,
+    "category":"Bakery",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/953_1657599742631.png",
+    "name":"Bread & Pav",
+    "type":5
+}
+, {
+    "id":41,
+    "category":"Bakery",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/28_1643445056245.png",
+    "name":"Cookies",
+    "type":5
+}
+, {
+    "id":42,
+    "category":"Bakery",
+    "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/app/images/category/cms_images/icon/105_1668515747141.png",
+    "name":"Cream Biscuits",
+    "type":5
+}
+
+]

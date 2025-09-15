@@ -7,6 +7,7 @@ import { CiSearch } from "react-icons/ci";
 import { FaRegCircleUser } from "react-icons/fa6";
 
 import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
 const Header = () => {
   const router = useRouter()
@@ -33,13 +34,14 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white ">
+    <div className="sticky top-0 z-50 w-full bg-white pb-2">
       <header className="w-full  mx-auto ">
         {/* === Desktop / large === */}
         <div className="hidden lg:flex items-center  gap-4">
           {/* Logo + address */}
           <div className="flex items-center ">
             <div className="p-7 border border-transparent border-r-gray-100">
+              <Link href={"/"}>
               <Image
               src="/assets/logo/logo (2).png"
               alt="Blinkit Logo"
@@ -47,6 +49,8 @@ const Header = () => {
               height={40}
               className="w-28 h-auto"
             />
+              </Link>
+              
             </div>
             
             <div className="p-5">
