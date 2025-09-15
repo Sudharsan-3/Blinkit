@@ -6,7 +6,7 @@ import data2 from "../data/Snacks .json";
 import data3 from "../data/Hookah.json";
 import data4 from "../data/Mouth-fresheners.json";
 import data5 from "../data/Juices.json";
-import data6 from "../data/Candies .json";
+import data6 from "../data/Candies.json";
 
 const ProductContainer = () => {
   const title = "Dairy, Bread & Eggs";

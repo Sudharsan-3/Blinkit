@@ -6,7 +6,11 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
 import { FaRegCircleUser } from "react-icons/fa6";
 
+import { useRouter } from 'next/navigation';
+import Link from "next/link";
+
 const Header = () => {
+  const router = useRouter()
   const placeholders = [
     "Search 'sugar'",
     "Search 'snacks'",
@@ -30,13 +34,14 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white ">
+    <div className="sticky top-0 z-50 w-full bg-white pb-2">
       <header className="w-full  mx-auto ">
         {/* === Desktop / large === */}
         <div className="hidden lg:flex items-center  gap-4">
           {/* Logo + address */}
           <div className="flex items-center ">
             <div className="p-7 border border-transparent border-r-gray-100">
+              <Link href={"/"}>
               <Image
               src="/assets/logo/logo (2).png"
               alt="Blinkit Logo"
@@ -44,6 +49,8 @@ const Header = () => {
               height={40}
               className="w-28 h-auto"
             />
+              </Link>
+              
             </div>
             
             <div className="p-5">
@@ -59,7 +66,9 @@ const Header = () => {
           <div className="flex items-center w-[50%] h-12 rounded-2xl border border-gray-200 px-4">
             <CiSearch size={22} className="text-gray-500" />
             <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
+              
               <input
+                onClick={()=>router.push('/s')} 
                 type="text"
                 className="absolute w-full outline-none text-sm bg-transparent"
                 style={{
@@ -115,6 +124,7 @@ const Header = () => {
           <CiSearch size={22} className="text-gray-500" />
           <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
             <input
+             onClick={()=>router.push('/s')} 
               type="text"
               className="absolute w-full outline-none text-sm bg-transparent"
               style={{
