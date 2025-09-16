@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import All from "../../data/AllProducts.json";
 import FCard from './FCard';
