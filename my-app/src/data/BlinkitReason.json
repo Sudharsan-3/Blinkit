@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/web/blinkit-promises/10_minute_delivery.png",
+        "name":"Superfast Delivery",
+        "reason":"Get your order delivered to your doorstep at the earliest from dark stores near you."
+    }
+    ,
+    {
+        "id":2,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/web/blinkit-promises/Best_Prices_Offers.png",
+        "name":"Best Prices & Offers",
+        "reason":"Best price destination with offers directly from the manufacturers."
+    }
+    ,
+    {
+        "id":3,
+        "image":"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/web/blinkit-promises/Wide_Assortment.png",
+        "name":"Wide Assortment",
+        "reason":"Choose from 5000+ products across food, personal care, household & other categories."
+    }
+]

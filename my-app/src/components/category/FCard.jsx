@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { LuTimer } from "react-icons/lu";
 import Notfounded from "../search not founded/Notfounded";
+import Link from "next/link";
 
 const FCard = ({ data = [] }) => {
   return (
@@ -12,10 +13,10 @@ const FCard = ({ data = [] }) => {
           className="
             grid 
             grid-cols-2 
-            md:grid-cols-2 
+            md:grid-cols-3 
             lg:grid-cols-6 
             gap-4 
-            justify-items-center
+            items-start
           "
         >
           {data.map((item) => {
@@ -27,9 +28,13 @@ const FCard = ({ data = [] }) => {
             return (
               <div
                 key={item.id}
-                className="relative w-full max-w-[180px] bg-white border border-gray-100 shadow-sm hover:shadow-md rounded-md overflow-hidden p-2"
+                className="relative w-full bg-white border border-gray-100 shadow-sm hover:shadow-md rounded-md overflow-hidden p-2"
               >
-                {/* Offer badge */}
+                <Link  href={{
+                  pathname: "/detailOfProducts",
+                  query: { id: item.id } // or whatever property you want
+                }} >
+                
                 {item.offer > 0 && (
                   <div className="absolute top-0 left-2">
                     <div className="relative flex items-center justify-center">
@@ -63,6 +68,9 @@ const FCard = ({ data = [] }) => {
                     className="object-contain"
                   />
                 </div>
+                 </Link>
+                {/* Offer badge */}
+                
 
                 {/* Info */}
                 <div className="mt-2">
@@ -72,23 +80,33 @@ const FCard = ({ data = [] }) => {
                       <span className="ml-1">{item.timin}</span>
                     </div>
                   )}
-
-                  <div
-                    className="text-sm font-medium leading-tight overflow-hidden mt-2"
-                    style={{
-                      display: "-webkit-box",
-                      WebkitLineClamp: 2,
-                      WebkitBoxOrient: "vertical",
-                    }}
-                  >
-                    {item.name}
-                  </div>
+                  <Link  href={{
+                  pathname: "/detailOfProducts",
+                  query: { id: item.id } // or whatever property you want
+                }} >
+                    <div
+                      className="text-sm font-medium leading-tight overflow-hidden mt-2"
+                      style={{
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        lineHeight: "1.2rem",          // your line-height (sm ~1.25rem)
+                        minHeight: "2.4rem",           // 2 × lineHeight ensures two-line space
+                      }}
+                    >
+                      {item.name}
+                    </div>
+                  </Link>
 
                   {item.qty && (
                     <div className="text-xs text-gray-500">{item.qty}</div>
                   )}
 
                   <div className="mt-2 flex items-center justify-between">
+                  <Link  href={{
+                  pathname: "/detailOfProducts",
+                  query: { id: item.id } // or whatever property you want
+                }} >
                     <div className="flex flex-col items-center justify-center min-h-[32px]">
                       {hasOffer ? (
                         <>
@@ -100,8 +118,10 @@ const FCard = ({ data = [] }) => {
                       ) : (
                         <div className="text-sm font-semibold">₹{item.price}</div>
                       )}
-                    </div>
+                    </div> 
+                    </Link>
                     <button
+                      onClick={() => console.log("Hiii")}
                       className="ml-2 hover:cursor-pointer border border-green-600 text-green-600 text-xs px-3 py-2 rounded hover:bg-green-600 hover:text-white transition-colors"
                       style={{ height: "32px" }}
                       aria-label={`Add ${item.name}`}
@@ -110,16 +130,16 @@ const FCard = ({ data = [] }) => {
                     </button>
                   </div>
                 </div>
+
+
               </div>
             );
           })}
-         
         </div>
       ) : (
         <div className="w-full max-h-[35rem] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
-
-             <Notfounded /></div>
-       
+          <Notfounded />
+        </div>
       )}
     </div>
   );

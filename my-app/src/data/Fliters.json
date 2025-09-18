@@ -122,14 +122,14 @@
     "category":"Fruits",
     "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1702463308432-3",
     "name":"Fresh Vegetables",
-    "type":5
+    "type":1
 }
 , {
     "id":19,
     "category":"Fruits",
     "image":"https://cdn.grofers.com/app/images/category/cms_images/rc-upload-1702734004998-8",
     "name":"Fresh Fruits",
-    "type":5
+    "type":2
 }
 , {
     "id":20,

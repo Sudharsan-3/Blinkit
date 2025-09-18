@@ -3,9 +3,10 @@ import React from 'react';
 
 const Details = () => {
   return (
-    <div className="max-w-5xl mx-auto p-4">
-      {/* ✅ Top details section */}
-      <div className="bg-white shadow rounded-lg p-6 mb-6">
+    <div className="flex items-center justify-center ">
+      <div className='w-7xl bg-white'>
+        {/* ✅ Top details section */}
+      <div className="  rounded-lg p-6 ">
         <h1 className="text-2xl font-bold mb-2">Product Name (Example)</h1>
         <p className="text-gray-600 mb-4">
           Brand: Example Brand | Category: Electronics | In Stock
@@ -25,7 +26,7 @@ const Details = () => {
       </div>
 
       {/* ✅ Additional info below */}
-      <div className="bg-gray-50 rounded-lg p-6">
+      <div className=" rounded-lg p-6">
         <h2 className="text-xl font-semibold mb-2">Highlights</h2>
         <ul className="list-disc list-inside text-gray-700">
           <li>Free shipping on orders above ₹999</li>
@@ -33,6 +34,8 @@ const Details = () => {
           <li>1-year manufacturer warranty</li>
         </ul>
       </div>
+      </div>
+      
     </div>
   );
 };
