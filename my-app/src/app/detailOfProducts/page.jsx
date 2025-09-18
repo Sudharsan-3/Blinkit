@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Detailed from '@/components/DetailedProductPage/Detailed'
 import Header from '@/components/Header'
@@ -14,8 +14,10 @@ const page = () => {
   return (
     <div>
         <Header />
+        <Suspense fallback={<div>Loading products…</div>}>
         <Detailed id={id} />
         <ExtraProducts id={id}/>
+        </Suspense>
         <Footer />
       
     </div>
