@@ -3,7 +3,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import data from "../../data/Fliters.json";
 
+
 const Filter = ({ category, setType }) => {
+
+   
+
+
   const filtered = data.filter(
     (e) => e.category.toLowerCase() === category.toLowerCase()
   );
