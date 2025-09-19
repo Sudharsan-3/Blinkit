@@ -4,6 +4,13 @@ import Image from "next/image";
 import { LuTimer } from "react-icons/lu";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
+import { IoMdAdd } from "react-icons/io";
+import { FiMinus } from "react-icons/fi";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, removeFromCart, clearCart  } from "@/Redux/features/CartSlice"
+
+
+
 
 const Products = ({ data = [] }) => {
   const scrollerRef = useRef(null);
@@ -11,6 +18,14 @@ const Products = ({ data = [] }) => {
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const dispatch = useDispatch();
+
+  // ✅ get items array from cart slice
+  const cartItems = useSelector((state) => state.cart.items);
+  
+
+  // const cart = useSelector((state) => state.cart.totalQuantity);
 
   /** measure card width + arrows */
   const updateMeasurements = () => {
@@ -117,6 +132,12 @@ const Products = ({ data = [] }) => {
 
             const w = cardWidth || 170;
 
+            // ✅ find this product in the cart
+            const cartItem = cartItems.find((c) => c.id === item.id);
+
+            // ✅ get its quantity (or 0 if not found)
+            const quantity = cartItem?.quantity || 0;
+
             return (
               <div
                 key={item.id}
@@ -212,13 +233,32 @@ const Products = ({ data = [] }) => {
                           <div className="text-sm font-semibold">₹{item.price}</div>
                         )}
                       </div></Link>
-                    <button
-                      className="ml-2 hover:cursor-pointer border border-green-600 text-green-600 text-xs px-3 py-2 rounded hover:bg-green-600 hover:text-white transition-colors"
-                      style={{ height: "32px" }}
-                      aria-label={`Add ${item.name}`}
-                    >
-                      ADD
-                    </button>
+                    <div>
+                      {quantity === 0 ? (
+                        <button
+                          onClick={() => dispatch(addToCart(item))}
+                          className="ml-2 hover:cursor-pointer border border-green-600 text-green-600 text-xs px-6 py-2 rounded  transition-colors"
+                          style={{ height: "32px" }}
+                          aria-label={`Add ${item.name}`}
+                        >
+                          ADD
+                        </button>
+                      ) : (
+                        <div className="flex items-center justify-center gap-3 ml-2 hover:cursor-pointer border border-green-600 text-white text-sm px-2 py-1.5 rounded bg-green-600  transition-colors">
+                          <div onClick={() => dispatch(removeFromCart(item.id))}>
+                            <FiMinus />
+                          </div>
+                          <p>{quantity}</p>
+                          <div onClick={() => dispatch(addToCart(item))}>
+                            <IoMdAdd />
+                          </div>
+                        </div>
+                      )}
+
+
+
+                    </div>
+
                   </div>
                 </div>
               </div>

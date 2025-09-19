@@ -11,6 +11,7 @@ const Page = () => {
       <Suspense fallback={<div>Loading products…</div>}>
         <ProductsFiltered />
       </Suspense>
+      
       <Footer />
     </div>
   )
