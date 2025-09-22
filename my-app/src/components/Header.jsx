@@ -5,12 +5,15 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiSearch } from "react-icons/ci";
 import { FaRegCircleUser } from "react-icons/fa6";
+import CartDrawer from "@/components/Cart/CartDrawer";
 
-import { useRouter } from 'next/navigation';
+import { useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import MobileCartButton from "./Cart/MobileCartButton";
 
 const Header = () => {
-  const router = useRouter()
+  const router = useRouter();
   const placeholders = [
     "Search 'sugar'",
     "Search 'snacks'",
@@ -18,9 +21,15 @@ const Header = () => {
     "Search 'fruits'",
     "Search 'vegetables'",
   ];
+
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [fade, setFade] = useState(true);
-  const [cartItems] = useState(0);
+
+  const cartItems = useSelector((state) => state.cart.totalQuantity);
+  const cartPrice = useSelector((state) => state.cart.totalPrice);
+
+  // 🔹 new: state to toggle the drawer
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,24 +44,23 @@ const Header = () => {
 
   return (
     <div className="sticky top-0 z-50 w-full bg-white pb-2">
-      <header className="w-full  mx-auto ">
+      <header className="w-full mx-auto ">
         {/* === Desktop / large === */}
-        <div className="hidden lg:flex items-center  gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           {/* Logo + address */}
           <div className="flex items-center ">
             <div className="p-7 border border-transparent border-r-gray-100">
               <Link href={"/"}>
-              <Image
-              src="/assets/logo/logo (2).png"
-              alt="Blinkit Logo"
-              width={112}
-              height={40}
-              className="w-28 h-auto"
-            />
+                <Image
+                  src="/assets/logo/logo (2).png"
+                  alt="Blinkit Logo"
+                  width={112}
+                  height={40}
+                  className="w-28 h-auto"
+                />
               </Link>
-              
             </div>
-            
+
             <div className="p-5">
               <h1 className="font-extrabold text-base">Delivery in 21 minutes</h1>
               <div className="flex items-center gap-1 text-sm text-gray-600">
@@ -66,9 +74,8 @@ const Header = () => {
           <div className="flex items-center w-[50%] h-12 rounded-2xl border border-gray-200 px-4">
             <CiSearch size={22} className="text-gray-500" />
             <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
-              
               <input
-                onClick={()=>router.push('/s')} 
+                onClick={() => router.push("/s")}
                 type="text"
                 className="absolute w-full outline-none text-sm bg-transparent"
                 style={{
@@ -82,26 +89,41 @@ const Header = () => {
           </div>
 
           {/* Login + cart */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 ">
             <div className="cursor-pointer p-7">
               <p className="text-lg font-medium">Login</p>
             </div>
             <button
               disabled={cartItems === 0}
-              className={`flex items-center gap-2 px-4 py-3 rounded-lg transition text-white ${
+              // 🔹 open drawer only if items > 0
+              onClick={() => cartItems > 0 && setShowCart(true)}
+              className={`flex items-center px-3 py-3 rounded-lg transition text-white mr-4 ${
                 cartItems === 0
                   ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                   : "bg-green-500 text-white hover:animate-wiggle"
               }`}
             >
-              <HiOutlineShoppingCart size={22} />
-              My Cart
+              <div className="flex w-25  gap-2 items-center justify-center text-xs hover:cursor-pointer">
+                <div>
+                  <HiOutlineShoppingCart size={30} />
+                </div>
+                <div>
+                  {cartItems > 0 ? (
+                    <div className="flex flex-col">
+                      <div>{cartItems} items</div>
+                      <div>₹ {cartPrice}</div>
+                    </div>
+                  ) : (
+                    <p>My Cart</p>
+                  )}
+                </div>
+              </div>
             </button>
           </div>
         </div>
 
         {/* === Mobile / tablet === */}
-        <div className="flex  w-full justify-between lg:hidden p-4">
+        <div className="flex w-full justify-between lg:hidden p-4">
           {/* Address */}
           <div>
             <h1 className="font-extrabold text-sm sm:text-base">
@@ -119,26 +141,29 @@ const Header = () => {
         </div>
 
         {/* Search below icons */}
-        <div className="px-4  lg:px-0">
-          <div className="   flex lg:hidden items-center w-full h-12 rounded-2xl border border-gray-200 px-4">
-          <CiSearch size={22} className="text-gray-500" />
-          <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
-            <input
-             onClick={()=>router.push('/s')} 
-              type="text"
-              className="absolute w-full outline-none text-sm bg-transparent"
-              style={{
-                transform: fade ? "translateY(0%)" : "translateY(-100%)",
-                opacity: fade ? 1 : 0,
-                transition: "transform 0.3s ease, opacity 0.3s ease",
-              }}
-              placeholder={placeholders[placeholderIndex]}
-            />
+        <div className="px-4 lg:px-0">
+          <div className="flex lg:hidden items-center w-full h-12 rounded-2xl border border-gray-200 px-4">
+            <CiSearch size={22} className="text-gray-500" />
+            <div className="flex-1 px-3 relative overflow-hidden h-full flex items-center">
+              <input
+                onClick={() => router.push("/s")}
+                type="text"
+                className="absolute w-full outline-none text-sm bg-transparent"
+                style={{
+                  transform: fade ? "translateY(0%)" : "translateY(-100%)",
+                  opacity: fade ? 1 : 0,
+                  transition: "transform 0.3s ease, opacity 0.3s ease",
+                }}
+                placeholder={placeholders[placeholderIndex]}
+              />
+            </div>
           </div>
         </div>
-        </div>
-        
       </header>
+
+      {/* 🔹 Render the cart drawer */}
+      <CartDrawer isOpen={showCart} onClose={() => setShowCart(false)} />
+        <MobileCartButton />
 
       <style jsx>{`
         @keyframes wiggle {
