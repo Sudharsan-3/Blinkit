@@ -14,7 +14,7 @@ const CartProducts = ({ items = [] }) => {
         return (
           <div
             key={item.id}
-            className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 text-sm"
+            className="flex flex-row items-center justify-between gap-3 p-4 text-sm"
           >
             {/* image */}
             <div className="flex-shrink-0">
@@ -26,7 +26,7 @@ const CartProducts = ({ items = [] }) => {
             </div>
 
             {/* info + controls */}
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full gap-3">
+            <div className="flex  justify-between items-center w-full gap-3">
               <div className="flex flex-col">
                 <p className="font-medium">{item.name}</p>
                 <div className="flex items-center gap-2">
@@ -46,7 +46,7 @@ const CartProducts = ({ items = [] }) => {
               </div>
 
               {quantity > 0 && (
-                <div className="flex items-center gap-3 w-fit  border-green-600 text-white text-sm px-1 py-1 rounded bg-green-600 hover:bg-green-700 transition-colors">
+                <div className="flex items-center gap-3 w-fit  border-green-600 text-white text-sm px-1 py-2 rounded bg-green-600 hover:bg-green-700 transition-colors">
                   <button onClick={() => dispatch(removeFromCart(item.id))}>
                     <FiMinus />
                   </button>

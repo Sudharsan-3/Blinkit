@@ -89,7 +89,7 @@ const Header = () => {
           </div>
 
           {/* Login + cart */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 ">
             <div className="cursor-pointer p-7">
               <p className="text-lg font-medium">Login</p>
             </div>
@@ -103,7 +103,7 @@ const Header = () => {
                   : "bg-green-500 text-white hover:animate-wiggle"
               }`}
             >
-              <div className="flex gap-2 items-center justify-center text-xs hover:cursor-pointer">
+              <div className="flex w-25  gap-2 items-center justify-center text-xs hover:cursor-pointer">
                 <div>
                   <HiOutlineShoppingCart size={30} />
                 </div>
