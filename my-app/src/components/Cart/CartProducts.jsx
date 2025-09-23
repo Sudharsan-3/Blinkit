@@ -47,11 +47,11 @@ const CartProducts = ({ items = [] }) => {
 
               {quantity > 0 && (
                 <div className="flex items-center gap-3 w-fit  border-green-600 text-white text-sm px-1 py-2 rounded bg-green-600 hover:bg-green-700 transition-colors">
-                  <button onClick={() => dispatch(removeFromCart(item.id))}>
+                  <button className="hover:cursor-pointer" onClick={() => dispatch(removeFromCart(item.id))}>
                     <FiMinus />
                   </button>
                   <p>{quantity}</p>
-                  <button onClick={() => dispatch(addToCart(item))}>
+                  <button className="hover:cursor-pointer" onClick={() => dispatch(addToCart(item))}>
                     <IoMdAdd />
                   </button>
                 </div>

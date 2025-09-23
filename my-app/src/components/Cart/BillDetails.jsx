@@ -1,16 +1,24 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { CgNotes } from "react-icons/cg";
 import { GiScooter } from "react-icons/gi";
 import { BsInfoLg, BsHandbagFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
-
+import { BsCart3 } from "react-icons/bs";
+import PopUps from "../PopUp/PopUps";
 const BillDetails = () => {
     const {
         totalPrice,
         totalSavings,
         deliveryCharge,
         totalOriginalPrice,
+        pickUp,
+        grandTotal,
+        smallCartCharge,
+        handlingCharge,
     } = useSelector((state) => state.cart);
+    const [openInfo, setOpenInfo] = useState(false);
+    const [type, setType] = useState("")
 
     return (
         <div className="p-2">
@@ -48,7 +56,13 @@ const BillDetails = () => {
                         <div className="flex items-center gap-2">
                             <GiScooter />
                             <span>Delivery charge</span>
-                            <BsInfoLg className="text-gray-400" size={12} />
+                            <div
+                                onClick={() => (setOpenInfo(true), setType("deliveryCharge"))}
+                                className="border border-gray-100 shadow-sm rounded-full hover:cursor-pointer p-1"
+                            >
+                                <BsInfoLg className="text-gray-400" size={12} />
+                            </div>
+
                         </div>
                         {deliveryCharge ? (
                             <span>₹{deliveryCharge}</span>
@@ -65,37 +79,66 @@ const BillDetails = () => {
                         <div className="flex items-center gap-2">
                             <BsHandbagFill />
                             <span>Handling charge</span>
-                            <BsInfoLg className="text-gray-400" size={12} />
+                            <div
+                                onClick={() => (setOpenInfo(true), setType("handlingCharge"))}
+                                className="border border-gray-100 shadow-sm rounded-full hover:cursor-pointer p-1"
+                            >
+                                <BsInfoLg className="text-gray-400" size={12} />
+                            </div>
+
                         </div>
-                        <span>₹2</span>
+                        <span>₹{handlingCharge}</span>
                     </div>
+                    {smallCartCharge ? (
+
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                                <BsCart3 />
+
+                                <span>Small cart charge
+                                </span>
+                                <div
+                                    onClick={() => (setOpenInfo(true), setType("smallCartCharge"))}
+                                    className="border border-gray-100 shadow-sm rounded-full hover:cursor-pointer p-1"
+                                >
+                                    <BsInfoLg className="text-gray-400" size={12} />
+                                </div>
+
+                            </div>
+                            <span>₹{smallCartCharge}</span>
+                        </div>
+                    ) : ""}
+
 
                     {/* Grand total */}
                     <div className="flex items-center justify-between pt-2 ">
                         <span className="font-medium">Grand total</span>
                         <span className="font-bold text-base">
-                            ₹
-                            {(
-                                totalPrice > 99
-                                    ? totalPrice + 2           // above 99 → only handling charge
-                                    : totalPrice + 2 + 25      // below 99 → handling + delivery charge
-                            ).toFixed(1)}
+                            ₹{grandTotal}
                         </span>
                     </div>
 
 
                     {/* Savings box */}
                     {
-                        totalSavings>0?(<div className="flex items-center">
-                        <div className="flex items-center p-3 rounded-2xl font-semibold text-blue-500 bg-blue-100 w-full justify-between">
-                            <span>Your total savings</span>
-                            <span>₹{totalSavings}</span>
-                        </div>
-                    </div>):("")
+                        totalSavings > 0 ? (<div className="flex items-center">
+                            <div className="flex items-center p-3 rounded-2xl font-semibold text-blue-500 bg-blue-100 w-full justify-between">
+                                <span>Your total savings</span>
+                                <span>₹{totalSavings}</span>
+                            </div>
+                        </div>) : ("")
                     }
-                    
+
                 </div>
             </div>
+
+            {/* Info Modal */}
+            <PopUps
+                open={openInfo}
+                onClose={() => setOpenInfo(false)}
+                title={type}
+            />
+                
         </div>
     );
 };
@@ -104,76 +147,3 @@ export default BillDetails;
 
 
 
-// import React from 'react'
-// import { CgNotes } from "react-icons/cg";
-// import { GiScooter } from "react-icons/gi";
-// import { BsInfoLg } from "react-icons/bs";
-// import { BsHandbagFill } from "react-icons/bs";
-// import { useDispatch, useSelector } from 'react-redux';
-
-
-
-
-// const BillDetails = () => {
-//     const { items, totalQuantity, totalPrice, totalSavings, deliveryCharge, totalOriginalPrice } = useSelector((state) => state.cart);
-
-//     return (
-//         <div className='p-2'>
-//             <div className='bg-white p-3 rounded-2xl'>
-//                 <h1>Bill details</h1>
-//                 <div className='text-sm flex flex-col gap-2'>
-//                     <div className='flex flex-col gap-2'>
-//                         <div className=' flex items-center justify-between '>
-//                             <div className='flex items-center  gap-1'>
-//                                 <div><CgNotes /></div>
-//                                 <div>items total</div>
-//                                 <div className='text-blue-500 bg-blue-100 px-0.5'>saved ₹{totalSavings}</div>
-//                             </div>
-//                             {
-//                                 totalPrice ? <div className='flex gap-1'><div className='line-through'>₹{totalOriginalPrice}</div> <div>₹{totalPrice}</div>  </div> : <div>{totalOriginalPrice}</div>
-//                             }
-
-//                         </div>
-//                         <div className=' flex items-center justify-between'>
-//                             <div className='flex items-center  gap-1'>
-//                                 <div><GiScooter />   </div>
-//                                 <div>Delivery charge  </div>
-//                                 <div><BsInfoLg />     </div>
-//                             </div>
-//                             {deliveryCharge ? <div>₹{deliveryCharge} </div> : <div className='flex gap-1'><div className='line-through'>25</div><div> Free</div> </div>}
-
-//                         </div>
-//                         <div className=' flex items-center justify-between'>
-//                             <div className='flex items-center  gap-1'>
-//                                 <div><BsHandbagFill /> </div>
-//                                 <div>Handling charge</div>
-//                                 <div><BsInfoLg />
-//                                 </div>
-//                             </div>
-//                             <div>₹{2} </div></div>
-
-//                     </div>
-//                     <div className='flex items-center justify-between'>
-//                         <div>Grand total</div>
-//                         <div>₹{totalPrice + 2}</div>
-//                     </div>
-//                     <div className='flex items-center '>
-//                         <div className='flex items-center  p-4 rounded-2xl font-semibold text-blue-500 bg-blue-100 w-full justify-between '>
-//                             <h1>
-//                                 Your total savings
-//                             </h1>
-//                             <div>
-//                                 ₹{totalSavings}
-//                             </div>
-//                         </div>
-//                     </div>
-
-
-//                 </div>
-//             </div>
-
-//         </div>
-//     )
-// }
-
-// export default BillDetails
