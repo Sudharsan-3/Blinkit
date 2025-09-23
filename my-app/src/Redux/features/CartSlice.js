@@ -1,18 +1,19 @@
+// Redux/features/CartSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  items: [], // each item: {id, name, price, originalPrice, offer?, quantity, ...}
+  items: [],
   totalQuantity: 0,
-  totalPrice: 0,           // discounted total (sum of item prices)
-  totalOriginalPrice: 0,   // sum of original prices × qty
-  totalSavings: 0,         // includes pickup discount
+  totalPrice: 0,
+  totalOriginalPrice: 0,
+  totalSavings: 0,
   deliveryCharge: 0,
-  smallCartCharge: 0,      
-  handlingCharge: 0,       
-  pickupDiscount: 0,       // ✅ pickup discount
-  grandTotal: 0,           
+  smallCartCharge: 0,
+  handlingCharge: 0,
+  pickupDiscount: 0,
+  grandTotal: 0,
   lastError: null,
-  pickUp: false,           
+  pickUp: false,
 };
 
 const cartSlice = createSlice({
@@ -20,13 +21,11 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const newItem = action.payload; // {id, name, price, offer(optional)}
-
+      const newItem = action.payload;
       const originalPrice = newItem.price;
       const discount = newItem.offer && newItem.offer > 0
         ? originalPrice * (newItem.offer / 100)
         : 0;
-
       const finalPrice = Number((originalPrice - discount).toFixed(1));
 
       const existingItem = state.items.find(item => item.id === newItem.id);
@@ -41,7 +40,7 @@ const cartSlice = createSlice({
       } else {
         state.items.push({
           ...newItem,
-          originalPrice: originalPrice,
+          originalPrice,
           price: finalPrice,
           quantity: 1,
           totalItemPrice: finalPrice,
@@ -69,18 +68,7 @@ const cartSlice = createSlice({
     },
 
     clearCart: (state) => {
-      state.items = [];
-      state.totalQuantity = 0;
-      state.totalPrice = 0;
-      state.totalOriginalPrice = 0;
-      state.totalSavings = 0;
-      state.deliveryCharge = 0;
-      state.smallCartCharge = 0;
-      state.handlingCharge = 0;
-      state.pickupDiscount = 0;
-      state.grandTotal = 0;
-      state.lastError = null;
-      state.pickUp = false;
+      Object.assign(state, initialState);
     },
 
     clearError: (state) => {
@@ -114,29 +102,22 @@ function recalcTotals(state) {
   state.totalPrice = Number(discountedPrice.toFixed(1));
   state.totalOriginalPrice = Number(originalPriceTotal.toFixed(1));
 
-  // Handling charge (flat ₹2 if cart not empty)
+  // Handling charge
   state.handlingCharge = quantity > 0 ? 2 : 0;
 
-  // Delivery charge
+  // Delivery & small cart charge
   if (state.pickUp) {
     state.deliveryCharge = 0;
+    state.smallCartCharge = 0;
   } else {
     state.deliveryCharge = state.totalPrice >= 99 ? 0 : 25;
-  }
-
-  // Small cart charge
-  if (!state.pickUp && state.totalPrice < 99) {
-    state.smallCartCharge = 25;
-  } else {
-    state.smallCartCharge = 0;
+    state.smallCartCharge = state.totalPrice < 99 ? 25 : 0;
   }
 
   // Pickup discount 5%
-  if (state.pickUp) {
-    state.pickupDiscount = Number((state.totalPrice * 0.05).toFixed(1));
-  } else {
-    state.pickupDiscount = 0;
-  }
+  state.pickupDiscount = state.pickUp
+    ? Number((state.totalPrice * 0.05).toFixed(1))
+    : 0;
 
   // Total savings = item-level savings + pickup discount
   state.totalSavings = Number((itemSavings + state.pickupDiscount).toFixed(1));
