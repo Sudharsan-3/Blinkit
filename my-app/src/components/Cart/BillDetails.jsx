@@ -19,6 +19,7 @@ const BillDetails = () => {
     } = useSelector((state) => state.cart);
     const [openInfo, setOpenInfo] = useState(false);
     const [type, setType] = useState("")
+    
 
     return (
         <div className="p-2">
