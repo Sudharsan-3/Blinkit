@@ -13,5 +13,10 @@
         "id":3,
         "name" : "smallCartCharge",
         "deatils":["Please add more items to avoid this charge. We're charging a fee for orders below ₹99 to continue servicing your small requirements"]
+    },
+    {
+        "id":3,
+        "name" : "DeliveryType",
+        "deatils":["If you select pick-up, a 5% discount will be applied to the overall price." ,"₹25 for orders below ₹99","₹0 for orders above ₹99"]
     }
 ]
