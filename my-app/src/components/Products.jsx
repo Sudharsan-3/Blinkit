@@ -127,7 +127,7 @@ const Products = ({ data = [] }) => {
           data.map((item) => {
             const hasOffer = item.offer && item.offer > 0;
             const discounted = hasOffer
-              ? Math.round(item.price - (item.price * item.offer) / 100)
+              ? (item.price - (item.price * item.offer) / 100).toFixed(1)
               : item.price;
 
             const w = cardWidth || 170;

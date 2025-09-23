@@ -3,11 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   items: [], // each item: {id, name, price, originalPrice, offer?, quantity, ...}
   totalQuantity: 0,
-  totalPrice: 0,           // discounted total
-  totalOriginalPrice: 0,   // ✅ new – sum of original prices × qty
+  totalPrice: 0,           // discounted total (sum of item prices)
+  totalOriginalPrice: 0,   // sum of original prices × qty
   totalSavings: 0,
   deliveryCharge: 0,
+  smallCartCharge: 0,      // ✅ new
+  handlingCharge: 0,       // ✅ new
+  grandTotal: 0,           // ✅ new
   lastError: null,
+  pickUp: false,           // ✅ pickup option
 };
 
 const cartSlice = createSlice({
@@ -19,7 +23,7 @@ const cartSlice = createSlice({
 
       const originalPrice = newItem.price;
 
-      // ✅ calculate discounted price if offer exists
+      // calculate discounted price if offer exists
       const discount =
         newItem.offer && newItem.offer > 0
           ? originalPrice * (newItem.offer / 100)
@@ -76,19 +80,29 @@ const cartSlice = createSlice({
       state.items = [];
       state.totalQuantity = 0;
       state.totalPrice = 0;
-      state.totalOriginalPrice = 0;  // ✅ reset
+      state.totalOriginalPrice = 0;
       state.totalSavings = 0;
       state.deliveryCharge = 0;
+      state.smallCartCharge = 0;
+      state.handlingCharge = 0;
+      state.grandTotal = 0;
       state.lastError = null;
+      state.pickUp = false;
     },
 
     clearError: (state) => {
       state.lastError = null;
     },
+
+    // ✅ when user selects pickup/delivery
+    pickUpOption: (state, action) => {
+      state.pickUp = action.payload; // true for pickup, false for delivery
+      recalcTotals(state); // recompute charges accordingly
+    },
   },
 });
 
-// helper to recompute totals/savings/delivery
+// helper to recompute totals/savings/delivery/charges
 function recalcTotals(state) {
   let quantity = 0;
   let discountedPrice = 0;
@@ -106,13 +120,43 @@ function recalcTotals(state) {
 
   state.totalQuantity = quantity;
   state.totalPrice = Number(discountedPrice.toFixed(1));
-  state.totalOriginalPrice = Number(originalPriceTotal.toFixed(1)); // ✅
+  state.totalOriginalPrice = Number(originalPriceTotal.toFixed(1));
   state.totalSavings = Number(savings.toFixed(1));
 
-  // delivery charge rule
-  state.deliveryCharge = state.totalPrice >= 99 ? 0 : 25;
+  // ✅ Handling charge = ₹2 flat per cart (only if cart not empty)
+  state.handlingCharge = quantity > 0 ? 2 : 0;
+
+  // Delivery charge rule
+  if (state.pickUp) {
+    state.deliveryCharge = 0;
+  } else {
+    state.deliveryCharge = state.totalPrice >= 99 ? 0 : 25;
+  }
+
+  // Small cart charge rule
+  // apply only if totalPrice < 99 and delivery selected
+  if (!state.pickUp && state.totalPrice < 99) {
+    state.smallCartCharge = 25; // you can adjust this value
+  } else {
+    state.smallCartCharge = 0;
+  }
+
+  // Grand total = totalPrice + deliveryCharge + smallCartCharge + handlingCharge
+  state.grandTotal = Number(
+    (
+      state.totalPrice +
+      state.deliveryCharge +
+      state.smallCartCharge +
+      state.handlingCharge
+    ).toFixed(1)
+  );
 }
 
-export const { addToCart, removeFromCart, clearCart, clearError } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  clearCart,
+  clearError,
+  pickUpOption,
+} = cartSlice.actions;
 export default cartSlice.reducer;

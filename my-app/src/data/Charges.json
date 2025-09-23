@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "name" : "deliveryCharge",
+        "deatils":["₹25 for orders below ₹99","₹0 for orders above ₹99"]
+    },
+    {
+        "id":2,
+        "name" : "handlingCharge",
+        "deatils":["For proper handling and ensuring high quality quick-deliveries"]
+    },
+    {
+        "id":3,
+        "name" : "smallCartCharge",
+        "deatils":["Please add more items to avoid this charge. We're charging a fee for orders below ₹99 to continue servicing your small requirements"]
+    }
+]
