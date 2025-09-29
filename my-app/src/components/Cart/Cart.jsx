@@ -1,6 +1,5 @@
-// components/Cart.jsx
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GiStopwatch } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -9,7 +8,7 @@ import CartProducts from "./CartProducts";
 import BillDetails from "./BillDetails";
 import CancellationPolicy from "./CancellationPolicy";
 import PopUps from "../PopUp/PopUps";
-import { pickUpOption } from "../../Redux/features/CartSlice"; // ✅
+import { pickUpOption } from "../../Redux/features/CartSlice";
 
 const Cart = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -18,11 +17,17 @@ const Cart = ({ onClose }) => {
 
   const [openInfo, setOpenInfo] = useState(false);
   const [type, setType] = useState(false);
-  const [delivery,seDelivery] = useState()
+  const [loading, setLoading] = useState(false); // ✅ new loading state
 
-  const handelClick = ()=>{
-    
-  }
+  const handleDeliveryChange = (isPickup) => {
+    setLoading(true);
+    dispatch(pickUpOption(isPickup));
+  };
+
+  // stop loading automatically when pickUp changes
+  useEffect(() => {
+    if (loading) setLoading(false);
+  }, [pickUp]);
 
   return (
     <div className="bg-gray-100 h-full overflow-y-auto">
@@ -61,7 +66,7 @@ const Cart = ({ onClose }) => {
                   </p>
                 </div>
               </div>
-            ):(
+            ) : (
               <div className="flex items-center p-5 gap-5">
                 <div className="bg-gray-100 p-3 rounded-2xl">
                   <GiStopwatch size={32} />
@@ -98,29 +103,35 @@ const Cart = ({ onClose }) => {
                 </div>
               </div>
 
-              <div className="flex gap-5 items-center justify-between px-5 py-3 ">
-                {/* Delivery option */}
-                <div className="flex items-center gap-2 hover:cursor-pointer">
-                  <input
-                    type="radio"
-                    name="deliveryOption"
-                    // checked={!pickUp}
-                    onChange={() => dispatch(pickUpOption(false))}
-                  />
-                  <label className="text-sm">Delivery</label>
-                </div>
+              {loading ? (
+                <h1 className="px-5 py-3 text-center font-bold text-gray-600">
+                  Loading...
+                </h1>
+              ) : (
+                <div className="flex gap-5 items-center justify-between px-5 py-3">
+                  {/* Delivery option */}
+                  <div className="flex items-center gap-2 hover:cursor-pointer">
+                    <input
+                      type="radio"
+                      name="deliveryOption"
+                      checked={!pickUp}
+                      onChange={() => handleDeliveryChange(false)}
+                    />
+                    <label className="text-sm">Delivery</label>
+                  </div>
 
-                {/* Pickup option */}
-                <div className="flex items-center gap-2 ">
-                  <input
-                    type="radio"
-                    name="deliveryOption"
-                    // checked={pickUp}
-                    onChange={() => dispatch(pickUpOption(true))}
-                  />
-                  <label className="text-sm">Pick Up</label>
+                  {/* Pickup option */}
+                  <div className="flex items-center gap-2 ">
+                    <input
+                      type="radio"
+                      name="deliveryOption"
+                      checked={pickUp}
+                      onChange={() => handleDeliveryChange(true)}
+                    />
+                    <label className="text-sm">Pick Up</label>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Products */}
