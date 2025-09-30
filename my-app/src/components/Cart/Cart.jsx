@@ -97,7 +97,7 @@ const Cart = ({ onClose }) => {
                     </p>
                   ) : (
                     <p className="bg-red-300 p-1 rounded text-red-600">
-                      You saved: 0
+                      You saved: ₹0
                     </p>
                   )}
                 </div>
